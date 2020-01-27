@@ -1,0 +1,48 @@
+@font-face{src: url("font/Roboto-Regular.ttf"),}
+@font-face{src: url("font/Roboto-Black.ttf"),}
+@font-face{src: url("font/Roboto-Italic.ttf"),}
+
+.root{
+    background-header-color:#0e617e;
+}
+
+#header{
+    -fx-background-color:background-header-color;
+}
+
+#header-title{
+    -fx-font-family: "roboto Black";
+    -fx-font-size:50px;
+    -fx-text-fill: white;
+}
+
+
+.tab{-fx-background-insets: 0 1 0 1,0,0;}
+.tab-pane{-fx-tab-min-width:90px;}
+.tab-pane .tab{-fx-background-color: #3c3c3c;}
+.tab-pane .tab:selected{
+    -fx-background-color: background-header-color;
+    -fx-background-insets: 0, 0 0 0 0;
+}
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: none;
+}
+
+.tab-label{
+    -fx-font-family: "roboto Regular";
+    -fx-text-fill: #f5f5f5;
+}
+.tab:selected .tab-label{
+    -fx-font-family: "roboto Regular";
+    -fx-text-fill: white;
+    -fx-background-color: background-header-color;
+}
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 5 0 0 0;
+ }
+
+
+
+
+

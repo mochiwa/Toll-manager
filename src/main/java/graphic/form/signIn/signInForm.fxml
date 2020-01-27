@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="mainPane" nodeOrientation="LEFT_TO_RIGHT" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox id="mainLayout" alignment="BOTTOM_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="331.0" prefWidth="472.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox id="headerBox">
+               <children>
+                  <HBox alignment="TOP_CENTER">
+                     <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                           <Insets top="10.0" />
+                        </HBox.margin></ImageView>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label id="title" alignment="CENTER" contentDisplay="TOP" maxWidth="Infinity" prefWidth="472.0" text="Sign In" textAlignment="CENTER" />
+                  <Label id="error" fx:id="labelError" alignment="CENTER" maxWidth="Infinity" text="An error occur" textAlignment="CENTER" />
+               </children>
+            </VBox>
+            <VBox id="formLayout" alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="113.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                   <TextField fx:id="fieldLogin" alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" promptText="Username" />
+                  <PasswordField fx:id="fieldPassword" alignment="CENTER" promptText="password" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

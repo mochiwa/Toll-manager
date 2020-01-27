@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainWindow" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+      <VBox alignment="TOP_RIGHT" spacing="10.0">
+         <children>
+
+            <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                <tabs>
+
+                  <Tab text="Employees">
+                      <AnchorPane>
+                          <VBox maxWidth="Infinity" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                                <fx:include source="components/header/headerView.fxml" />
+                                <fx:include fx:id="employeeForm" source="form/employee/employeeForm.fxml" />
+                          </VBox>
+                      </AnchorPane>
+                  </Tab>
+
+                    <Tab fx:id="tabPlanning" text="Planning" disable="true">
+                        <AnchorPane>
+                            <VBox maxWidth="Infinity" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                                <fx:include source="components/header/headerView.fxml" />
+                                <fx:include fx:id="planningBoard" source="components/planning/planningBoard.fxml" VBox.vgrow="ALWAYS" />
+                            </VBox>
+                        </AnchorPane>
+                    </Tab>
+
+              </tabs>
+            </TabPane>
+
+         </children>
+      </VBox>
+   </center>
+
+   <top>
+      <HBox alignment="TOP_RIGHT" prefHeight="48.0" prefWidth="789.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLogoutAction" prefHeight="47.0" prefWidth="75.0" text="Logout" />
+         </children></HBox>
+   </top>
+
+   <bottom>
+      <HBox prefHeight="28.0" prefWidth="789.0" BorderPane.alignment="CENTER" />
+   </bottom>
+
+   <left>
+      <AnchorPane fx:id="boardPane" maxWidth="300" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </left>
+</BorderPane>

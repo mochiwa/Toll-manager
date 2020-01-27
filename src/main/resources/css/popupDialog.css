@@ -1,0 +1,40 @@
+@font-face{src: url("font/Roboto-Regular.ttf"),}
+@font-face{src: url("font/Roboto-Black.ttf"),}
+
+
+.root{
+    ok_button-color:#0e7e63;
+    ok_button-color-hover:#227e67;
+    ok_button-color-pressed:#037e60;
+
+    background-color:white;
+}
+
+.button-bar > .container  {-fx-padding: 0;}
+.dialog-pane {
+    -fx-padding:0;
+    -fx-background-color:background-color;
+}
+#mainPane{-fx-padding:0;}
+#docker{ -fx-padding: 0;}
+
+.button{
+    -fx-background-color: ok_button-color;
+
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius:0;
+
+    -fx-min-height:40px;
+
+    -fx-font-family: "roboto regular";
+    -fx-font-size:20px;
+    -fx-text-fill: white;
+}
+.button:hover{
+    -fx-background-color:ok_button-color-hover;
+}
+
+.button:pressed{
+    -fx-background-color:ok_button-color-pressed;
+}
+

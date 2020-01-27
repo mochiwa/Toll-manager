@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="mainPane" fx:id="mainPane" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic.form.employee.EmployeeFormController">
+    <children>
+        <Text fx:id="errorText" fill="#f52b2b" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="598.7294921875">
+        </Text>
+
+        <VBox fx:id="formBox">
+            <children>
+                <VBox>
+                    <fx:include fx:id="personForm" source="../person/personForm.fxml" />
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+                </VBox>
+                <HBox alignment="CENTER" spacing="80">
+                    <fx:include fx:id="typeEmployeeMenu" source="selectionMenu/typeEmployeeMenu.fxml" />
+                    <fx:include fx:id="teamSelectionMenu" source="selectionMenu/teamSelectionMenu.fxml" />
+                </HBox>
+                <fx:include fx:id="userForm" source="../userForm/userForm.fxml" />
+            </children>
+        </VBox>
+
+
+        <VBox fx:id="buttonBox" alignment="BOTTOM_RIGHT" spacing="10.0" VBox.vgrow="NEVER">
+            <children>
+                <Button fx:id="validateButton" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#handleValidateButton" text="Validate" />
+                <Button id="button-cancel" maxWidth="Infinity" mnemonicParsing="false" onMouseClicked="#handleCancelButton" text="Cancel" />
+            </children>
+        </VBox>
+
+
+    </children>
+</VBox>

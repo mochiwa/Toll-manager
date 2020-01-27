@@ -1,0 +1,59 @@
+.column{
+     -fx-border-color:black;
+     -fx-border-width: 1 2 1 0;
+ }
+
+.lastColumn{
+    -fx-border-width: 1 1 1 0;
+    -fx-border-color:black;
+}
+.firstColumn{
+    -fx-border-width: 1 2 1 1;
+    -fx-border-color:black;
+}
+.firstColumn:hover{
+    -fx-border-width: 1 2 1 1;
+    -fx-border-color:black;
+}
+
+
+.header{
+    -fx-border-style:solid;
+    -fx-border-width: 0 0 1 0;
+}
+.header .label{
+     -fx-font-family: "roboto Regular";
+     -fx-text-fill: Black;
+     -fx-font-size:16px;
+ }
+
+
+.list-view{
+    -fx-border-width:0;
+    -fx-focus-color: transparent;
+ }
+
+.list-cell{
+ -fx-alignment:center;
+ -fx-border-style: solid;
+ -fx-border-width: 0 0 1 0;
+}
+.lastCell{
+    -fx-border-width: 1 0 0 0;
+}
+.workingCell{
+    -fx-background-color:green;
+}
+
+.list-cell:hover{
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-color: blue;
+}
+
+.list-cell:selected{
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-background-color:orange;
+}

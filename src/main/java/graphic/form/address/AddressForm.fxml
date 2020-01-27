@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import graphic.components.input.*?>
+<?import javafx.geometry.Insets?>
+<GridPane fx:id="mainLayout" id="mainPane"  hgap="10.0" vgap="13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic.form.address.AddressFormController">
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+
+        <GridPane id="boxAddress" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="NEVER" />
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <Label id="label" text="Street:"  GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <FormTextField id="field" fx:id="fieldStreet" promptText="Your street" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            </children>
+            <GridPane.margin>
+                <Insets top="10.0" />
+            </GridPane.margin>
+        </GridPane>
+
+
+        <GridPane id="boxAddress" GridPane.rowIndex="0" GridPane.columnIndex="1" >
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="NEVER" />
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <Label id="label" text="Number:"  GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <FormTextField id="field" fx:id="fieldNumber" GridPane.rowIndex="1" promptText="Your house number" GridPane.columnIndex="0" maxWidth="200"/>
+            </children>
+            <GridPane.margin>
+                <Insets top="10.0" />
+            </GridPane.margin>
+        </GridPane>
+
+        <GridPane id="boxAddress" GridPane.rowIndex="1" GridPane.columnIndex="0" >
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="NEVER" />
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <Label id="label" text="City:" GridPane.rowIndex="0"  GridPane.columnIndex="0"/>
+                <FormTextField id="field" fx:id="fieldCity" GridPane.columnIndex="0" GridPane.rowIndex="1" promptText="Your city" />
+            </children>
+            <GridPane.margin>
+                <Insets top="10.0" />
+            </GridPane.margin>
+        </GridPane>
+
+
+        <GridPane id="boxAddress" GridPane.rowIndex="1" GridPane.columnIndex="1" >
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="NEVER" />
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <Label id="label" text="Zip code:"  GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <FormTextField  id="field" fx:id="fieldZip" promptText="Your town zip" GridPane.columnIndex="0" GridPane.rowIndex="1" maxWidth="200"/>
+            </children>
+            <GridPane.margin>
+                <Insets top="10.0" />
+            </GridPane.margin>
+        </GridPane>
+
+
+        <GridPane id="boxAddress" GridPane.rowIndex="2" GridPane.columnIndex="0" >
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="NEVER" />
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <Label id="label" text="Country:" GridPane.rowIndex="0"/>
+                <FormTextField id="field" fx:id="fieldCountry" GridPane.columnIndex="0" GridPane.rowIndex="1" promptText="Your country"/>
+            </children>
+            <GridPane.margin>
+                <Insets top="10.0" />
+            </GridPane.margin>
+        </GridPane>
+
+
+
+
+        <!--*<FormTextField fx:id="fieldNumber" promptText="Your house number" GridPane.columnIndex="2" />
+
+        <Label text="City:" GridPane.rowIndex="1" />
+        <FormTextField fx:id="fieldCity" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Your city" />
+
+
+        <FormTextField fx:id="fieldZip" promptText="Your town zip" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+        <Label text="Country:" GridPane.rowIndex="2" />
+        <FormTextField fx:id="fieldCountry" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="Your country" />-->
+    </children>
+</GridPane>

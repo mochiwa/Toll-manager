@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import graphic.components.input.*?>
+<GridPane fx:id="mainPane" hgap="60.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic.form.email.EmailFormController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label text="Email:" GridPane.columnIndex="0" />
+        <FormTextField fx:id="fieldEmail" promptText="xxxxxx@xxxxx.xxx" GridPane.columnIndex="1" />
+    </children>
+   <padding>
+      <Insets right="50.0" />
+   </padding>
+</GridPane>

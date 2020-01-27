@@ -1,0 +1,24 @@
+@font-face{src: url("font/Roboto-Regular.ttf"),}
+@font-face{src: url("font/Roboto-Black.ttf"),}
+
+#headerBox{
+    -fx-background-color:#0e617e;
+}
+#title{
+     -fx-font-family: "roboto black";
+     -fx-font-size:30px;
+     -fx-text-fill: white;
+     -fx-underline:true;
+     -fx-text-alignment:center;
+}
+#error{
+    -fx-font-family: "roboto italic";
+         -fx-font-size:14px;
+         -fx-text-fill: red;
+}
+
+.label{
+     -fx-font-family: "roboto regular";
+     -fx-font-size:14px;
+     -fx-text-fill: black;
+}

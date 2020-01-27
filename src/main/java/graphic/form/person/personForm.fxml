@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import graphic.components.input.*?>
+<VBox fx:id="mainLayout" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic.form.person.PersonFormController">
+    <children>
+        <GridPane id="formLayout" alignment="CENTER" hgap="10.0" vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="89.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="51.0" minWidth="10.0" prefWidth="49.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="40.0" vgrow="NEVER" /> <!-- Title Identity -->
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.0" vgrow="NEVER" /> <!-- Title Address -->
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="NEVER" /> <!-- Title Contact -->
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints />
+            </rowConstraints>
+            <children>
+                <HBox id="h2" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+                    <Label text="Identity:" />
+                </HBox>
+                <GridPane fx:id="personLayout" hgap="30.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" /><!-- alignement text : SOMETIEMS/ALWAYS -->
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                    <Label text="Name"/>
+                    <FormTextField fx:id="fieldName" promptText="Your Name" GridPane.columnIndex="1" />
+                    <Label text="Forename" GridPane.rowIndex="1" />
+                    <FormTextField fx:id="fieldForename" promptText="Your Forename" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Label text="Niss" GridPane.rowIndex="3" />
+                    <FormTextField fx:id="fieldNiss" promptText="xx.xx.xx-xxx.xx" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Label text="Birthday" GridPane.rowIndex="2" />
+                    <FormTextField fx:id="fieldBirthday" promptText="yyyy/mm/dd" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    </children>
+
+                </GridPane>
+
+                <HBox id="h2" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                    <Label text="Address:" />
+                    <GridPane.margin>
+                        <Insets bottom="10.0" />
+                    </GridPane.margin>
+                </HBox>
+
+
+                <AnchorPane GridPane.columnSpan="2" GridPane.rowIndex="4">
+                    <fx:include fx:id="addressForm" source="../address/AddressForm.fxml" />
+                </AnchorPane>
+
+                <HBox id="h2" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                    <Label text="Contact:" />
+                    <GridPane.margin>
+                        <Insets top="5.0" />
+                    </GridPane.margin>
+                </HBox>
+                <VBox GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="6" >
+                    <fx:include fx:id="emailForm" source="../email/EmailForm.fxml" />
+                    <fx:include fx:id="phoneForm" source="../phone/PhoneForm.fxml"  />
+                </VBox>
+            </children>
+        </GridPane>
+    </children>
+</VBox>

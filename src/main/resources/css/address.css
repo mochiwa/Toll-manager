@@ -1,0 +1,26 @@
+
+#mainPane{
+    -fx-padding: 0 0 0 20;
+}
+
+#boxAddress{
+    -fx-padding:0;
+}
+
+#boxAddress > #label{
+    -fx-font-family: "roboto regular";
+    -fx-font-size:14px;
+    -fx-text-fill: black;
+
+    -fx-translate-x:  12;
+    -fx-translate-y: -15;
+    -fx-background-color:none; /*hide behind*/
+     -fx-view-order:0;
+}
+
+
+#boxAddress > #label:disabled{
+     -fx-translate-x:  1;
+     -fx-translate-y: -18;
+     -fx-underline:true;
+}

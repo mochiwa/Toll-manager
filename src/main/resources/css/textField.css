@@ -1,0 +1,20 @@
+@font-face{src: url("font/Roboto-Regular.ttf"),}
+.text-field{
+     -fx-font-family: "roboto Regular";
+     -fx-font-size:13px;
+     -fx-text-fill: black;
+}
+
+.error-field{
+    -fx-text-box-border: red ;
+    -fx-focus-color: red ;
+    -fx-border-color:red;
+}
+
+.correct-field{
+    -fx-text-box-border: green ;
+    -fx-focus-color: green ;
+    -fx-border-color:green;
+}
+
+

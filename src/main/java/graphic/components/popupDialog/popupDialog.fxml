@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root fx:id="mainPane" type="BorderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+    <bottom>
+      <VBox alignment="TOP_CENTER" spacing="10" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonValidate" maxWidth="Infinity" mnemonicParsing="false" text="Validate" />
+            <Button fx:id="buttonCancel" maxWidth="Infinity" mnemonicParsing="false" text="Cancel" />
+         </children>
+      </VBox>
+    </bottom>
+    <center>
+      <AnchorPane id="docker" fx:id="docker" BorderPane.alignment="TOP_CENTER" />
+    </center>
+</fx:root>

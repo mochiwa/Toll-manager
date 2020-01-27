@@ -1,0 +1,67 @@
+@font-face{src: url("font/Roboto-Regular.ttf"),}
+@font-face{src: url("font/Roboto-Black.ttf"),}
+@font-face{src: url("font/Roboto-Medium.ttf"),}
+
+.label{
+    -fx-font-family: "roboto Regular";
+        -fx-font-size:13px;
+        -fx-text-fill: black;
+}
+
+
+#h2 > .label {
+    -fx-font-family: "roboto Medium";
+    -fx-font-size:16px;
+    -fx-text-fill: black;
+    -fx-underline:true;
+}
+
+
+
+ .button{
+     -fx-background-color: #0e7e63;
+
+     -fx-background-insets: 0 0 0 0;
+     -fx-background-radius:0;
+
+     -fx-min-height:30px;
+
+     -fx-font-family: "roboto regular";
+     -fx-font-size:15px;
+     -fx-text-fill: white;
+ }
+ .button:hover{
+     -fx-background-color:#23826b;
+ }
+
+ .button:pressed{
+     -fx-background-color:#037e60;
+ }
+
+ #button-cancel{
+    -fx-background-color:#C80141;
+ }
+ #button-cancel:hover{
+      -fx-background-color:#d90247;
+  }
+
+ #button-cancel:pressed{
+      -fx-background-color:#b00038;
+  }
+
+
+*:disabled {
+     -fx-opacity: 1;
+ }
+
+.text-field:disabled{
+    -fx-font-family: "roboto regular";
+    -fx-padding:0;
+    -fx-border-color:black;
+    -fx-background-color:transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.menu-button:disabled .arrow{
+    -fx-background-color:transparent;
+}

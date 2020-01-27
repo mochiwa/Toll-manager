@@ -1,0 +1,51 @@
+@font-face{src: url("font/Roboto-Regular.ttf"),}
+@font-face{src: url("font/Roboto-Black.ttf"),}
+@font-face{src: url("font/Roboto-Medium.ttf"),}
+
+
+#mainPane{
+    -fx-hgap:10;
+}
+
+
+.menu-button{
+    -fx-background-insets: 0 1 0 1,0,0;
+    -fx-border-style:none;
+    -fx-border-radius :0;
+    -fx-background-color:#0e617e;
+    -fx-alignment:center;
+    -fx-padding : 0 50 0 50;
+}
+.menu-button .arrow{
+    -fx-background-color:white;
+}
+
+
+.menu-button .label{
+    -fx-font-family: "roboto Medium";
+    -fx-font-size:18px;
+    -fx-text-fill:white;
+}
+
+.menu-button .menu-item{
+    -fx-translate-x:  12;
+    -fx-padding : 0 50 0 50;
+    -fx-alignment:center;
+    -fx-font-size:15px;
+    -fx-background-color:#0e617e;
+}
+.menu-button .menu-item:focused{
+    -fx-background-color:#1d86ab;
+}
+
+.context-menu {
+    -fx-padding: 0;
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-color:transparent;
+}
+
+.label{
+    -fx-font-family: "roboto Regular";
+    -fx-font-size:16px;
+    -fx-text-fill: black;
+}
